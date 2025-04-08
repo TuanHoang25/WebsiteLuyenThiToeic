@@ -16,6 +16,7 @@ import java.util.Optional;
 @Service
 @RequiredArgsConstructor
 @Transactional
+//mô tả quản lý flashcards
 public class FlashCardService {
     private final FlashCardRepository cardRepository;
     /**
@@ -54,7 +55,7 @@ public class FlashCardService {
     }
     public void deleteCardById(Long id) {
         if (!cardRepository.existsById(id)) {
-            throw new IllegalStateException("Card with ID " + id + " does not exist.");
+            throw new IllegalStateException("Card with ID " + id + " does not exist this ID.");
         }
         cardRepository.deleteById(id);
     }
