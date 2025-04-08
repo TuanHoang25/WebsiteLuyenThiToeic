@@ -42,7 +42,7 @@ public class UserController {
         }
 
         if (!user.getPassword().equals(user.getConfirmPassword())) {
-            model.addAttribute("passwordError", "Passwords do not match");
+            model.addAttribute("passwordError", "Passwords don't match, please try again");
             return "users/register";
         }
 
